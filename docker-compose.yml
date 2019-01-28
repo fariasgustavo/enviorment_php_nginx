@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  php:
+    build: "./php"
+    volumes:
+      - /Users/capitaocueca/sites/masotti/masotti2017/:/usr/share/nginx/html
+  web:
+    image: "nginx:alpine"
+    volumes: 
+      - /Users/capitaocueca/sites/masotti/masotti2017/:/usr/share/nginx/html
+      - /Users/capitaocueca/Desktop/docker/nginx_php/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+    links:
+      - "php"  
+
