@@ -1,1 +1,1 @@
-# enviorment_php_nginx
+# environment_php_nginx
